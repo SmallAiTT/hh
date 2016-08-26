@@ -10,6 +10,8 @@
     "node/tc_Node.ts",
 
     "ui/tc_UIImg.ts",
-    "ui/tc_UIText.ts"
+    "ui/tc_UIText.ts",
+
+    "touch/tc_Touch.ts"
   ]
 }

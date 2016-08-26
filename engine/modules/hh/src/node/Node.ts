@@ -411,6 +411,11 @@ module hh{
             // 绘制锚点
             var ps = 1;
             ctx.fillRect(dx + dw*nodeOpt.ax - ps/2, dy + dh*nodeOpt.ay - ps/2, ps, ps);
+            if(self.name) {
+                ctx.font = '12px serif';
+                ctx.textBaseline='middle';
+                ctx.fillText(self.name, dx, dy + 6);
+            }
         }
 
         /**
