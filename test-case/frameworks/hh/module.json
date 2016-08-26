@@ -1,0 +1,8 @@
+{
+  "modules" : [
+    "canvas"
+  ],
+  "root" : "src",
+  "files" : [
+  ]
+}

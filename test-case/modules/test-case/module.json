@@ -1,0 +1,15 @@
+{
+  "modules" : [
+    "unit"
+  ],
+  "root" : "src",
+  "files" : [
+    "tc_init.ts",
+    "res_helper.ts",
+
+    "node/tc_Node.ts",
+
+    "ui/tc_UIImg.ts",
+    "ui/tc_UIText.ts"
+  ]
+}

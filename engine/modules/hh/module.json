@@ -1,0 +1,40 @@
+{
+  "modules" : [
+    "canvas"
+  ],
+  "root" : "src",
+  "files" : [
+    "core/base.ts",
+    "core/Class.ts",
+    "core/AsyncPool.ts",
+    "core/Emitter.ts",
+    "core/STR.ts",
+    "core/PATH.ts",
+    "core/ARR.ts",
+    "core/NET.ts",
+    "core/CFG.ts",
+    "core/Point.ts",
+    "core/ctx_init.ts",
+
+    "matrix/ColorMatrix.ts",
+    "matrix/Matrix.ts",
+
+    "node/Layout.ts",
+    "node/TouchCtx.ts",
+    "node/Touch.ts",
+    "node/NodeOpt.ts",
+    "node/Node.ts",
+
+    "texture/Texture.ts",
+    "texture/TexturePool.ts",
+    "texture/Sheet.ts",
+
+    "res/R.ts",
+    "res/parser/ImgParser.ts",
+
+    "ui/UIImgOpt.ts",
+    "ui/UIImg.ts",
+    "ui/UITextOpt.ts",
+    "ui/UIText.ts"
+  ]
+}

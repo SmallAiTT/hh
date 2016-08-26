@@ -1,0 +1,1 @@
+require('../../../buildTool.js').build(__dirname);

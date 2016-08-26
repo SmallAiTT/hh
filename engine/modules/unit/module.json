@@ -1,0 +1,9 @@
+{
+  "modules" : [
+    "hh"
+  ],
+  "root" : "src",
+  "files" : [
+    "unit.ts"
+  ]
+}
