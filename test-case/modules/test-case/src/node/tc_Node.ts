@@ -3,6 +3,29 @@
  */
 module tc{
     unit.curModuleName = moduleName_Node;
+
+
+    unit.addMenuItem('Node Rotatiom', function(){
+        hh.Node.debug = true;
+        var stage:hh.Node = hh.engine.stage;
+
+        var node1 = new hh.Node();
+        var node2 = new hh.Node();
+        node1.name = 'node1';
+        node2.name = 'node2';
+        node1.x = node1.y = 100;
+        node1.w = node1.h = 100;
+        node2.x = node2.y = 100;
+        node2.w = node2.h = 100;
+
+        node1.r = Math.PI/4;
+
+        node1.add(node2);
+        stage.add(node1);
+
+    });
+
+
     unit.addMenuItem('Node遍历测试', function(param){
         hh.Node.debug = true;
         var node1 = new hh.Node();
