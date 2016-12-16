@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>图像拉扯变形</title>
+    <style>
+        body{-moz-user-select: none;}
+        #cas{
+            position: absolute;
+            top: 80px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            border: 1px solid;
+        }
+        .tips{text-align: center;margin: 15px 0;}
+        .control{ text-align: center; }
+    </style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<body onselectstart="return false">
+<style>
+ul#bcty365_nav{padding-left:50px; margin-bottom:10px; border-bottom:2px solid #ccc; overflow:hidden; _zoom:1;}
+ul#bcty365_nav li{float:left; display:inline; margin:10px;}
+ul#bcty365_nav li a{display:block;color:#000000; font-size:16px;}
+ul#bcty365_nav li a,#wimoban_p,#wimoban_p a{ font-family:"微软雅黑";}
+ul#bcty365_nav li a:hover,#wimoban_p a:hover{color:red;}
+</style>	
+
+	<ul id="bcty365_nav">
+     <li><a target="top,_self" title="首页" href="http://www.bcty365.com/">首页</a></li>
+    <li><a target="top,_self"  title="网站开发" href="http://www.bcty365.com/list-9-1.html">网站开发</a></li>
+   <li><a target="top,_self" title="CMS教程" href="http://www.bcty365.com/list-100-1.html">CMS教程</a></li>
+    <li><a target="top,_self" title="数据库" href="http://www.bcty365.com/list-34-1.html">数据库</a></li>
+    <li><a target="top,_self" title="js特效代码" href="http://www.bcty365.com/list-12-1.html">js特效代码</a></li>
+    <li><a target="top,_self" title="网页特效" href="http://www.bcty365.com/list-61-1.html">网页特效</a></li>
+    <li><a target="top,_self" title="jQuery插件" href="http://www.bcty365.com/list-86-1.html">jQuery插件</a></li>
+    <li><a target="top,_self" title="站长学院" href="http://www.bcty365.com/list-96-1.html">站长学院</a></li>
+<li><script type="text/javascript" src="http://www.bcty365.com/statics/js/ad/show_400x25.js"></script></li></ul>
+
+
+<div class="tips">Tips:拖动图片四个角</div>
+<div class="control">
+    <input type="checkbox" id="dot"/><label for="dot">点</label>
+    <input type="checkbox" id="rect"/><label for="rect">方格</label>
+    <input type="checkbox" id="pic" checked/><label for="pic">贴图</label>
+    <select name="count" id="count">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="4">4</option>
+        <option value="10">10</option>
+        <option value="20" selected>20</option>
+        <option value="30">30</option>
+        <option value="50">50</option>
+    </select>
+</div>
+<canvas id="cas" width="500" height="300">
+    亲，你滴浏览器太out啦，换一个吧
+</canvas>
+
+<script src="matrix.js"></script>
+<script src="demo1.js"></script>
+  <div style=" clear:both; width:700px; margin:0 auto; text-align:center; padding-top:250px;">
+    <p >代码整理：<a href="http://www.bcty365.com" title="B5教程网"  style="color:#FF0000" alt="B5教程网">B5教程网</a></p>
+    <p>＊尊重他人劳动成果，转载请自觉注明出处！注：此代码仅供学习交流，请勿用于商业用途。</p>
+    <p></p>
+</div>
+</body>
+</html>

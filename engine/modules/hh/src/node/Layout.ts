@@ -2,6 +2,7 @@
  * Created by SmallAiTT on 2015/7/3.
  */
 module hh{
+    var _defArr = [0, 0, 0, 0];
     export class Layout extends Class{
         /** 相对布局类型： 0,1,2,10,11,12,20,21,22 */
         relativeType:number;
@@ -21,12 +22,12 @@ module hh{
         padding:number[];
 
         //@override
-        _initProp():void{
-            super._initProp();
+        $resetOrRecycle() {
+            super.$resetOrRecycle();
             var self = this;
             self.linearSum = 0;
-            self.margin = [0, 0, 0, 0];
-            self.padding = [0, 0, 0, 0];
+            self.margin = resetArr(self.margin, _defArr);
+            self.padding = resetArr(self.padding, _defArr);
         }
 
         // handle前处理

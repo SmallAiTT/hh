@@ -41,9 +41,15 @@ module hh{
 
         drawInfo:number[];
 
-        //@override
-        _initProp():void{
+        _initProp(){
             super._initProp();
+            var self = this;
+            self.c = [];
+            self.renderQueueRange = [];
+            self.drawInfo = [];
+        }
+
+        $resetOrRecycle(){
             var self = this;
             self.w = 0;
             self.h = 0;
@@ -60,15 +66,16 @@ module hh{
             self.worldAlpha = 1;
             self.v = true;
             self.resizableByRes = true;
-            self.c = [];
             self.drawable = false;
             self.matrix = new Matrix();
-            self.renderQueueRange = [];
-            self.drawInfo = [];
+            self.c.length = 0;
+            self.renderQueueRange.length = 0;
+            self.drawInfo.length = 0;
         }
-        constructor(NodeClass:any){
-            super();
-            this._TargetClass = NodeClass;
+        $reset(key:string, NodeClass:any){
+            super.$reset(key, NodeClass);
+            var self = this;
+            self._TargetClass = NodeClass;
             self.name = NodeClass.__n;
         }
     }

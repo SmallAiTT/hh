@@ -6,8 +6,10 @@
   "files" : [
     "core/base.ts",
     "core/Class.ts",
+    "core/common.ts",
     "core/AsyncPool.ts",
     "core/Emitter.ts",
+    "core/Pool.ts",
     "core/STR.ts",
     "core/PATH.ts",
     "core/ARR.ts",

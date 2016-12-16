@@ -2,6 +2,10 @@
  * Created by SmallAiTT on 2015/7/2.
  */
 module hh{
+    const TRUE = true;
+    const FALSE = false;
+    const NULL = null;
+
     export class Touch extends Emitter{
         static BEGAN:string = 'began';
         static MOVE:string = 'move';
@@ -13,11 +17,11 @@ module hh{
         target:Node;
 
         //@override
-        _initProp():void{
-            super._initProp();
+        $resetOrRecycle(){
+            super.$resetOrRecycle();
             var self = this;
-            self.childrenEnabled = true;
-            self.enabled = true;
+            self.childrenEnabled = TRUE;
+            self.enabled = TRUE;
         }
 
         isIn(wx:number, wy:number):boolean{
@@ -38,7 +42,7 @@ module hh{
                 // 先将节点推入栈中
                 if(nodeOpt.clip){// 如果有裁剪则需要现判断是否在裁剪区域内
                     if(!self.isIn(wx, wy)) {
-                        return null;
+                        return NULL;
                     }
                 }
                 stack.push(self);
@@ -84,7 +88,7 @@ module hh{
         _dtor(){
             super._dtor();
             var self = this;
-            self.target = null;
+            self.target = NULL;
         }
     }
 }

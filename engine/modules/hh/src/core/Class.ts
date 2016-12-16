@@ -273,6 +273,30 @@ module hh {
             }
         }
 
+        static __pool:Pool;
+        static __poolLimit:number = 100;
+        static get(opt?:any){
+            var clazz = this;
+            var p:Pool = clazz.__pool;
+            if(!p){
+                var p:Pool = clazz.__pool = new Pool();
+                p.defaultLimit = clazz.__poolLimit;
+                p.onCreate(function(key:string, opt?:any){
+                    return clazz._onCreate(opt);
+                });
+            }
+            return p.get(clazz.__n, opt);
+        }
+        static _onCreate(opt?:any){
+            return new this;
+        }
+
+        recycle(){
+            var self = this;
+            var p = self.__c.__pool;
+            if(p) p.rm(self);
+        }
+
         /** 类名 */
         __n:string;
         /** 实例对应的类 */
@@ -299,11 +323,18 @@ module hh {
         public init(...args:any[]) {
         }
 
+        $reset(key:string, opt?:any){}
+        $recycle(){}
+        $resetOrRecycle(){}
+        $release(){}
+
         public dtor() {
             var self = this;
             if (self.released) return;
             self.released = true;
             self._dtor();
+            // 处理ext拓展数据相关
+            hh.clearExtData(self);
         }
 
         _dtor() {

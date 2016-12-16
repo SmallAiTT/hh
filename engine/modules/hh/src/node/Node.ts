@@ -37,17 +37,19 @@ module hh{
         _initProp(){
             super._initProp();
             var self = this, clazz = self.__c;
-            self._nodeOpt = new NodeOpt(clazz);
-            self.touch = new clazz.Touch();
+            self._nodeOpt = NodeOpt.get(clazz);
+            self.touch = clazz.Touch.get();
             self.touch.target = self;
         }
         _dtor(){
             super._dtor();
             var self = this;
-            self._nodeOpt.dtor();
-            self.touch.dtor();
+            self._nodeOpt.recycle();// 回收自己
+            self.touch.recycle();
+
             // 解除绑定
-            self.touch = null;
+            delete self._nodeOpt;
+            delete self.touch;
         }
 
         /**
@@ -483,6 +485,11 @@ module hh{
                 drawInfo.push(1);
             }
             drawInfo.push(x, y, w, h);
+        }
+
+        _runDtor(){
+            // 节点的释放比较特殊，也需要走一次遍历
+
         }
     }
 }
